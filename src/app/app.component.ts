@@ -19,4 +19,10 @@ export class AppComponent {
     console.log('On App Component ', JSON.stringify(e));
     this.orderno = e;
   }
+
+  BShowNumBerChange(e: any) {
+    //alert(e);
+    console.log('On App Component  99999', JSON.stringify(e));
+    this.orderno = e;
+  }
 }

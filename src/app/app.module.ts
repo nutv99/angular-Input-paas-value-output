@@ -9,10 +9,12 @@ import { HelloComponent } from './hello.component';
 // import { ComaComponent } from './coma/coma.component';
 import { CombComponent } from './comb/comb.component';
 import { ComaComponent } from './coma/coma.component';
+import { OutSelect } from './out-select/out-select.component';
+
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, HelloComponent, ComaComponent, CombComponent],
+  declarations: [AppComponent, HelloComponent, ComaComponent, CombComponent,OutSelect],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
