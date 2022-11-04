@@ -49,3 +49,24 @@ export class OutSelect implements OnInit {
     });
   }
 }
+
+/*
+How To Use 
+ที่ไฟล์ Parent เรียกใช้
+<app-out-select 
+ [apiPathInput]="'th/department/All/1'"  
+ (myListChange)="BShowNumBerChange($event)"
+></app-out-select>
+// myListChange คือ OutputEmitter ที่จะ พ่่นค่า (Inject) ออกไปให้ Parent
+
+ที่ไฟล์ Parent สร้าง function เพื่อรับค่า จาก emit
+ในที่นี้คือ 
+BShowNumBerChange($event) 
+// Function ที่ฝั่ง Parent
+ BShowNumBerChange(e: any) {
+    //alert(e);
+    console.log('On App Component  99999', JSON.stringify(e));
+    this.orderno = e;
+  }
+
+*/
