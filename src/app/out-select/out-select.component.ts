@@ -52,6 +52,7 @@ export class OutSelect implements OnInit {
 
 /*
 How To Use 
+
 ที่ไฟล์ Parent เรียกใช้
 <app-out-select 
  [apiPathInput]="'th/department/All/1'"  

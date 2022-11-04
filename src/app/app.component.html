@@ -7,7 +7,8 @@
 <hr />
 <button (click)="setDataB()">Set Data OnB From App.Component</button>
 
-<app-out-select 
- [apiPathInput]="'th/department/All/1'"  
- (myListChange)="BShowNumBerChange($event)"
+<app-out-select
+  [apiPathInput]="'th/department/All/1'"
+  (myListChange)="BShowNumBerChange($event)"
 ></app-out-select>
+{{ result | json }}

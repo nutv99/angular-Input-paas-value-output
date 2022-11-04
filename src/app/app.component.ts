@@ -22,6 +22,7 @@ export class AppComponent {
 
   BShowNumBerChange(e: any) {
     //alert(e);
+    this.result = e ;
     console.log('On App Component  99999', JSON.stringify(e));
     this.orderno = e;
   }
