@@ -8,7 +8,7 @@
 <button (click)="setDataB()">Set Data OnB From App.Component</button>
 
 <app-out-select
- [Title] = "'แผนกสินค้า'"
+  [Title]="'แผนกสินค้า'"
   [apiPathInput]="'th/department/All/1'"
   [dataInit]="''"
   [ModelName]="'department'"
@@ -16,7 +16,7 @@
 ></app-out-select>
 
 <app-out-select
-  [Title] = "'หมวดสินค้า'"
+  [Title]="'หมวดสินค้า'"
   [apiPathInput]="'th/category/All/1'"
   [results]="orderno"
   [ModelName]="'category'"
@@ -24,9 +24,14 @@
 ></app-out-select>
 Children
 <app-out-select
-  [Title] = "'กลุ่มสินค้า'"
+  [Title]="'กลุ่มสินค้า'"
   [apiPathInput]="'th/groupItem/All/1'"
   [results]="orderno2"
   [ModelName]="'groupItem'"
   (myListChange)="B3ShowNumBerChange($event)"
 ></app-out-select>
+
+<hr />
+Test Directove
+<input type="text" (appPhttp)="setResultDirective($event)" />
+{{ resultDirective | json }}

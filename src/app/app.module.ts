@@ -10,11 +10,18 @@ import { HelloComponent } from './hello.component';
 import { CombComponent } from './comb/comb.component';
 import { ComaComponent } from './coma/coma.component';
 import { OutSelect } from './out-select/out-select.component';
-
+import { PhttpDirective } from './phttp.directive';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, HelloComponent, ComaComponent, CombComponent,OutSelect],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    ComaComponent,
+    CombComponent,
+    OutSelect,
+    PhttpDirective,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
