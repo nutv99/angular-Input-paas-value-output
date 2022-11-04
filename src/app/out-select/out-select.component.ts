@@ -10,6 +10,8 @@ export class OutSelect implements OnInit {
   @Input() apiPathInput: string;
   @Input() ModelName: string;
   @Input() dataInit: any;
+  @Input() Title: string;
+
   @Output() myListChange: EventEmitter<string> = new EventEmitter();
   sData: any = [{}];
   @Input() results: any = [{ ID: '2', departmentDesc: 'CCCCCCC' }];
