@@ -8,6 +8,7 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   orderno: any = {};
+  orderno2: any = {};
   result: any = {};
 
   setDataB() {
@@ -32,5 +33,11 @@ export class AppComponent {
     //this.result = e;
     
     this.orderno = e;
+  }
+  B3ShowNumBerChange(e: any) {
+    console.log('On App Component  B3', JSON.stringify(e));
+    //this.result = e;
+    
+    this.orderno2 = e;
   }
 }

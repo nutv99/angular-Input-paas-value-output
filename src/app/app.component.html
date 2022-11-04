@@ -18,5 +18,12 @@
   [apiPathInput]="'th/category/All/1'"
   [results]="orderno"
   [ModelName]="'category'"
-  (myListChange)="B2ShowNumBerChange($event)"
+  (myListChange)="B3ShowNumBerChange($event)"
+></app-out-select>
+
+<app-out-select
+  [apiPathInput]="'th/groupItem/All/1'"
+  [results]="orderno2"
+  [ModelName]="'groupItem'"
+  (myListChange)="B3ShowNumBerChange($event)"
 ></app-out-select>
