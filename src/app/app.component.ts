@@ -16,20 +16,21 @@ export class AppComponent {
 
   ShowNumBerChange(e: any) {
     //alert(e);
-    console.log('On App Component ', JSON.stringify(e));
+   // console.log('On App Component ', JSON.stringify(e));
     this.orderno = e;
   }
 
   BShowNumBerChange(e: any) {
     this.result = e;
 
-    console.log('On App Component  99999', JSON.stringify(e));
+    console.log('On App Component  B1', JSON.stringify(e));
     this.orderno = e;
   }
 
   B2ShowNumBerChange(e: any) {
-    this.result = e;
-
+    console.log('On App Component  B2', JSON.stringify(e));
+    //this.result = e;
+    
     this.orderno = e;
   }
 }
