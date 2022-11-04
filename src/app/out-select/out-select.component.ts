@@ -8,6 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class OutSelect implements OnInit {
   @Input() apiPathInput: string;
+  @Input() ModelName: string;
+  @Input() dataInit: any;
   @Output() myListChange: EventEmitter<string> = new EventEmitter();
   sData: any = [{}];
   results: any = [{ ID: '2', departmentDesc: 'CCCCCCC' }];
@@ -17,7 +19,11 @@ export class OutSelect implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.InitDataSelect();
+    if (this.dataInit === '') {
+      this.InitDataSelect();
+    } else {
+      this.results = this.dataInit;
+    }
   }
 
   async InitDataSelect() {
@@ -36,9 +42,16 @@ export class OutSelect implements OnInit {
 
   async setOutData(sParentID) {
     //this.results = '';
+    // this.myurl =
+    //   'https://lovetoshopmall.com/swagger/marlinshopWork2/' + this.apiPathInput;
+
     this.myurl =
-      'https://lovetoshopmall.com/swagger/marlinshopWork2/' + this.apiPathInput;
-    //console.log('aa', this.myurl);
+      'https://lovetoshopmall.com/swagger/marlinshopWork2/th/' +
+      this.ModelName +
+      '/WithChild/' +
+      sParentID.target.value;
+    // alert(this.myurl);
+
     await this.http.get<any>(this.myurl).subscribe((data) => {
       // อ่านค่า result จาก JSON response ที่ส่งออกมา
       console.table('Data For Select List OutData', data);

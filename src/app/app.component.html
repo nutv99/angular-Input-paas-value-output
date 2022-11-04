@@ -9,6 +9,14 @@
 
 <app-out-select
   [apiPathInput]="'th/department/All/1'"
+  [dataInit]="''"
+  [ModelName]="'department'"
   (myListChange)="BShowNumBerChange($event)"
 ></app-out-select>
-{{ result | json }}
+
+<app-out-select
+  [apiPathInput]="'th/category/All/1'"
+  [dataInit]="''"
+  [ModelName]="'category'"
+  (myListChange)="BShowNumBerChange($event)"
+></app-out-select>
