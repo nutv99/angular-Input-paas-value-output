@@ -12,7 +12,7 @@ export class OutSelect implements OnInit {
   @Input() dataInit: any;
   @Output() myListChange: EventEmitter<string> = new EventEmitter();
   sData: any = [{}];
-  results: any = [{ ID: '2', departmentDesc: 'CCCCCCC' }];
+  @Input() results: any = [{ ID: '2', departmentDesc: 'CCCCCCC' }];
   myurl: string = '';
   apiPath = '/th/department/All/1';
 
