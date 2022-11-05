@@ -28,10 +28,6 @@ export class PhttpDirective {
 
       // this.results = data;
       this.appHttpOut.emit(data);
-
-      //this.myListChange.emit(this.sData);
-      //this.AllRec = data.totalRec;
-      // this.results = data;
     });
   }
 }
