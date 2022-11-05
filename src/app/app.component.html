@@ -33,5 +33,8 @@ Children
 
 <hr />
 Test Directove
-<input type="text" (appPhttp)="setResultDirective($event)" />
+<input type="text" appPhttp (appHttpOut)="setResultDirective($event)" />
 {{ resultDirective | json }}
+
+
+<!-- <hello hello hi (greet)="onGreet($event)" [name]="name"></hello> -->

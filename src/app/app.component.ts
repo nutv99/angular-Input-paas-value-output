@@ -12,6 +12,8 @@ export class AppComponent {
   result: any = {};
   resultDirective: any = {};
 
+  // constructor(private appHttp: PhttpDirective) {}
+
   setDataB() {
     this.orderno = 'A111-989';
   }
@@ -43,7 +45,7 @@ export class AppComponent {
   }
 
   setResultDirective(e: any) {
-    console.log('On App Component  Directive', JSON.stringify(e));
+    console.log('*******On App Component  Directive', JSON.stringify(e));
     this.resultDirective = e;
   }
 }
